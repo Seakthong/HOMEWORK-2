@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www/thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container" th:fragment="body">
+<!--        <header>-->
+<!--            <div th:replace="fragments/structure_nav::header"></div>-->
+<!--        </header>-->
+        <table class="table">
+            <thead class="black white-text">
+                <tr>
+                    <th scope="col"​ th:text="#{CATEGORY.ID}">ID</th>
+                    <th scope="col" th:text="#{CATEGORY.NAME}">TITLE</th>
+                    <th scope="col" th:text="#{CATEGORY.ACTION}">ACTIONS</th>
+
+                </tr>
+            </thead>
+            <tbody th:if="${totalLimit}!=0">
+                <tr th:each="category : ${categories}">
+                    <td th:text="${category.id}"></td>
+                    <td th:text="${category.name}"></td>
+                    <td>
+                        <a th:href="@{/category/edit/{id}(id=${category.id})}" th:text="#{EDIT}" class="btn btn-primary">EDIT</a>
+                        <a th:href="@{/category/delete(id=${category.id})}" th:text="#{DELETE}" class="btn btn-danger">DELETE</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+<!--        <footer>-->
+<!--            <div th:replace="fragments/structure_nav::my-footer"></div>-->
+<!--        </footer>-->
+    </div>
+
+
+</body>
+
+</html>

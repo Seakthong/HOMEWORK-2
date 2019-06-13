@@ -1,0 +1,100 @@
+<div th:fragment="header">
+    <!--Main Navigation-->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark default-color">
+            <a class="navbar-brand" th:href="@{/article/view}" th:text="#{SEAKTHONGSQ}"><strong>Navbar</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" th:href="@{/article/view}" th:text="#{HOME}">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/article/add}" th:text="#{ADD_ARTICLE}">ADD</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/category/add}" th:text="#{ADD_CATEGORY}">ADD</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/article/view}" th:text="#{VIEW_ARTICLE}">VIEW</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/category/view}" th:text="#{VIEW_CATEGORY}"><VIEW></VIEW></a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav nav-flex-icons">
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{?lang=kh}"><img th:src="@{/flag/messages_kh.jpg}" class="messages-flag" alt="KH"></i></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{?lang=en}"><img th:src="@{/flag/messages_en.jpg}" class="messages-flag" alt="UK"></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!--Main Navigation-->
+</div>
+
+<div th:fragment="pagination-article" class="d-flex flex-center" th:if="${totalLimit}!=0">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination pg-blue" th:value="#{curPage}">
+            <li class="page-item"><a class="page-link" th:href="@{/article/pagination(page=1)}" th:text="#{FIRST}">First</a></li>
+            <li class="page-item"><a class="page-link" th:href="@{/article/pagination(page=${curPage}==1?1:${curPage}-1)}" th:text="#{PREVIOUS}">Previous</a></li>
+            <li class="page-item"><a class="page-link" th:each="i : ${#numbers.sequence( 1, totalPage)}" th:text="#{${i}}" th:href="@{/article/pagination(page=${i})}"></a></li>
+            <li class="page-item"><a class="page-link" th:href="@{/article/pagination(page=${curPage}==${totalPage}?${totalPage}:${curPage}+1)}" th:text="#{NEXT}">Next</a></li>
+            <li class="page-item"><a class="page-link" th:href="@{/article/pagination(page=${totalPage})}" th:text="#{LAST}">Last</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div th:fragment="pagination-category" class="d-flex flex-center" th:if="${totalLimit}!=0">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination pg-blue" th:value="#{curPage}">
+            <li class="page-item"><a class="page-link" th:href="@{/category/pagination(page=1)}" th:text="#{FIRST}">First</a></li>
+            <li class="page-item"><a class="page-link" th:href="@{/category/pagination(page=${curPage}==1?1:${curPage}-1)}" th:text="#{PREVIOUS}">Previous</a></li>
+            <li class="page-item"><a class="page-link" th:each="i : ${#numbers.sequence( 1, totalPage)}" th:text="#{${i}}" th:href="@{/category/pagination(page=${i})}"></a></li>
+            <li class="page-item"><a class="page-link" th:href="@{/category/pagination(page=${curPage}==${totalPage}?${totalPage}:${curPage}+1)}" th:text="#{NEXT}">Next</a></li>
+            <li class="page-item"><a class="page-link" th:href="@{/category/pagination(page=${totalPage})}" th:text="#{LAST}">Last</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div th:fragment="my-footer">
+    <!-- Footer -->
+    <footer class="page-footer font-small teal pt-4">
+        <!-- Footer Text -->
+        <div class="container-fluid text-center text-md-left">
+            <!-- Grid row -->
+            <div class="row">
+                <!-- Grid column -->
+                <div class="col-md-6 mt-md-0 mt-3">
+                    <!-- Content -->
+                    <h5 class="text-uppercase font-weight-bold" th:text="#{FOOTER-TITLE-TEXT-ONE}"></h5>
+                    <p th:text="#{FOOTER-TEXT-ONE}"></p>
+                </div>
+                <!-- Grid column -->
+                <hr class="clearfix w-100 d-md-none pb-3">
+                <!-- Grid column -->
+                <div class="col-md-6 mb-md-0 mb-3">
+                    <!-- Content -->
+                    <h5 class="text-uppercase font-weight-bold" th:text="#{FOOTER-TITLE-TEXT-TWO}"></h5>
+                    <p th:text="#{FOOTER-TEXT-TWO}"></p>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+        <!-- Footer Text -->
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3"><span th:text="#{COPY-RIGHT}">© 2018 Copyright:</span>
+            <a href="https://mdbootstrap.com/education/bootstrap/" th:text="#{DESIGN-BY}"> MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+</div>

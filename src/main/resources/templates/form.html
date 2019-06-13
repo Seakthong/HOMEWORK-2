@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .row{margin: 25px 0;}
+        /*.custom-file-input:lang(en)~.custom-file-label::after {*/
+        /*    content: "";*/
+        /*}*/
+    </style>
+    <block th:include="fragments/extra-fragment::style"></block>
+</head>
+
+<body>
+    <div class="container">
+        <div th:replace="fragments/structure_nav::header"></div>
+        <!-- Default form subscription -->
+        <form class="text-center border border-light p-5" th:method="POST"
+            th:action="${status}==0?add:@{/article/update(id=${article.id})}" th:object="${article}"
+            enctype="multipart/form-data">
+            <div class="container row">
+                <div class="col-6 container-fluid">
+                    <div class="row">
+                        <div class="col-4"><label th:text="#{FORM.ID}">ID</label></div>
+                        <div class="col-8"><input type="text" id="#in-id" th:field="*{id}" disabled></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4"><label th:text="#{FORM.TITLE}">TITLE</label></div>
+                        <div class="col-8"><input type="text" id="#in-title" th:field="*{title}"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4" th:text="#{FORM.CATEGORY}"></div>
+                        <div class="col-8">
+                            <select class="browser-default custom-select" th:field="*{category_id}">
+<!--                                <option selected th:value="null">Open this select menu</option>-->
+<!--                                <option th:value="" th:text=""></option>-->
+                                <option th:value="#{category.id}" th:text="#{category.name}" th:each="i : ${#numbers.sequence( 1, ${}}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4"><label th:text="#{FORM.AUTHOR}">AUTHOR</label></div>
+                        <div class="col-8"><input type="text" id="#in-author" th:field="*{author}"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4"><label th:text="#{FORM.DESCRIPTION}">DESCRIPTION</label></div>
+                        <div class="col-8"><input type="text" id="#in-description" th:field="*{description}"></div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <label th:text="#{FORM.IMAGE}">IMAGE</label>
+                    <div th:if="${status}==1">
+                        <img th:src="|../*{thumbnail}|" style="width: 250px; height: 250px;">
+                    </div>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFileLang" name="file">
+                        <label class="custom-file-label" th:if="${status}==1" style="::after{}">Browse</label>
+                        <label class="custom-file-label" th:if="${status}==0">Browse</label>
+                    </div>
+                </div>
+            </div>
+<!--            <input type="submit" value="SAVE">-->
+            <button type="submit" th:text="#{FORM.SAVEorUPDATE}"></button>
+            <button><a th:href="@{/article/view}" th:text="#{FORM.GO-HOME}"></a></button>
+        </form>
+
+    </div>
+    <!-- Default form subscription -->
+    <block th:include="fragments/extra-fragment::script"></block>
+
+
+</body>
+
+</html>

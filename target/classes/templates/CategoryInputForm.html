@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .row{margin: 25px 0;}
+        /*.custom-file-input:lang(en)~.custom-file-label::after {*/
+        /*    content: "";*/
+        /*}*/
+    </style>
+    <block th:include="fragments/extra-fragment::style"></block>
+</head>
+
+<body>
+    <div class="container">
+        <div th:replace="fragments/structure_nav::header"></div>
+        <!-- Default form subscription -->
+        <form class="text-center border border-light p-5" th:method="POST"
+            th:action="${status}==0?add:@{/category/edit(id=${category.id})}" th:object="${category}" >
+            <div class="container row">
+                <div class="col-6 container-fluid">
+                    <div class="row">
+                        <div class="col-4"><label th:text="#{FORM.ID}">ID</label></div>
+                        <div class="col-8"><input type="text" id="#in-id" th:field="*{id}" disabled></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4"><label th:text="#{FORM.NAME}">TITLE</label></div>
+                        <div class="col-8"><input type="text" id="#in-title" th:field="*{name}"></div>
+                    </div>
+                </div>
+            </div>
+<!--            <input type="submit" value="SAVE">-->
+            <button type="submit" th:text="#{FORM.SAVEorUPDATE}"></button>
+            <button><a th:href="@{/category/show}" th:text="#{FORM.GO-HOME}"></a></button>
+        </form>
+
+    </div>
+    <!-- Default form subscription -->
+    <block th:include="fragments/extra-fragment::script"></block>
+
+
+</body>
+
+</html>

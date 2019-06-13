@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www/thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container" th:fragment="body">
+<!--        <header>-->
+<!--            <div th:replace="fragments/structure_nav::header"></div>-->
+<!--        </header>-->
+        <table class="table">
+            <thead class="black white-text">
+                <tr>
+                    <th scope="col"​ th:text="#{ID}"></th>
+                    <th scope="col" th:text="#{TITLE}">TITLE</th>
+                    <th scope="col" th:text="#{CATEGORY}">CATEGORY</th>
+                    <th scope="col" th:text="#{AUTHOR}">AUTHOR</th>
+                    <th scope="col" th:text="#{DESCRIPTIONS}">DESCRIPTION</th>
+                    <th scope="col" th:text="#{THUMBNAIL}">THumm...</th>
+                    <th scope="col" th:text="#{ACTION}">ACTIONS</th>
+                    <th scope="col">
+                        <button th:text="#{SET_PAGE}" id="btn-set-page" type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#centralModalSm">Set Page</button>
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody th:if="${totalLimit}!=0">
+                <tr th:each="article : ${articles}">
+                    <td th:text="${article.id}"></td>
+                    <td th:text="${article.title}"></td>
+                    <td th:text="${article.category.name}"></td>
+                    <td th:text="${article.author}"></td>
+                    <td th:text="${article.description}"></td>
+                    <td><img th:src="@{${article.thumbnail}}" alt="default.png" style="width:75px; height: 75px;"></td>
+                    <td>
+                        <a th:href="@{/article/edit/{id}(id=${article.id})}" th:text="#{EDIT}" class="btn btn-primary">EDIT</a>
+                        <a th:href="@{/article/view/{id}(id=${article.id})}" th:text="#{VIEWS}" class="btn btn-success">VIEW</a>
+                        <a th:href="@{/article/articles(id=${article.id})}" th:text="#{DELETE}" class="btn btn-danger">DELETE</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+<!--        <footer>-->
+<!--            <div th:replace="fragments/structure_nav::my-footer"></div>-->
+<!--        </footer>-->
+    </div>
+
+
+</body>
+
+</html>
