@@ -38,7 +38,9 @@ public class DatabaseConfiguration {
     public DataSource memory(){
         EmbeddedDatabaseBuilder embeddedDatabaseBuilder = new EmbeddedDatabaseBuilder();
         embeddedDatabaseBuilder.setType(EmbeddedDatabaseType.H2);
-        embeddedDatabaseBuilder.addScript("classPath:/static/sql/createTable.sql");
+        System.out.println("work");
+        embeddedDatabaseBuilder.addScript("classPath:/sql/table.sql");
+        embeddedDatabaseBuilder.addScript("classPath:/sql/insert.sql");
         //classPth is from resource
         return embeddedDatabaseBuilder.build();
     }

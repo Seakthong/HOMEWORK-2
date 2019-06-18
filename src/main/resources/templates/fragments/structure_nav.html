@@ -22,7 +22,7 @@
                         <a class="nav-link btn" th:href="@{/category/add}" th:text="#{ADD_CATEGORY}">ADD</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn" th:href="@{/category/view}" th:text="#{VIEW_CATEGORY}"><VIEW></VIEW></a>
+                        <a class="nav-link btn" th:href="@{/category/view}" th:text="#{VIEW_CATEGORY}">VIEW</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav nav-flex-icons">
@@ -42,12 +42,18 @@
 </div>
 
 <div th:fragment="pagination-article" class="d-flex flex-center" th:if="${totalLimit}!=0">
+    <p th:text="${curPage}" id="currentPage" style="display: none;"></p>
     <nav aria-label="Page navigation example">
         <ul class="pagination pg-blue" th:value="#{curPage}">
             <li class="page-item"><a class="page-link" th:href="@{/article/pagination(page=1)}" th:text="#{FIRST}">First</a></li>
             <li class="page-item"><a class="page-link" th:href="@{/article/pagination(page=${curPage}==1?1:${curPage}-1)}" th:text="#{PREVIOUS}">Previous</a></li>
 
-            <li class="page-item"><a class="page-link" th:each="i : ${#numbers.sequence( 1, totalPage)}" th:text="#{${i}}" th:href="@{/article/pagination(page=${i})}"></a></li>
+            <li class="page-item" th:each="i : ${#numbers.sequence( 1, totalPage)}"><a class="page-link"  th:text="#{${i}}" th:href="@{/article/pagination(page=${i})}"></a></li>
+<!--            <li class="page-item" th:if="${curPage}>1"><a class="page-link" href="#">....</a></li>-->
+<!--            <li class="page-item" th:if=" ${curPage} == 1 AND ${curPage} > ${i}-3" th:each="i : ${#numbers.sequence( 1, totalPage)}"><a class="page-link"  th:text="#{${i}}" th:href="@{/article/pagination(page=${i})}"></a></li>-->
+<!--            <li class="page-item" th:if="${curPage} < ${i}+2 AND ${curPage} > 1 AND ${curPage} > ${i}-1" th:each="i : ${#numbers.sequence( 1, totalPage)}"><a class="page-link"  th:text="#{${i}}" th:href="@{/article/pagination(page=${i})}"></a></li>-->
+<!--            <li class="page-item" th:if="${curPage} == ${totaPage} AND ${curPage} > ${i}+2" th:each="i : ${#numbers.sequence( 1, totalPage)}"><a class="page-link"  th:text="#{${i}}" th:href="@{/article/pagination(page=${i})}"></a></li>-->
+<!--            <li class="page-item" th:if="${curPage}<${totalPage}"><a class="page-link" href="#">....</a></li>-->
 
             <li class="page-item"><a class="page-link" th:href="@{/article/pagination(page=${curPage}==${totalPage}?${totalPage}:${curPage}+1)}" th:text="#{NEXT}">Next</a></li>
             <li class="page-item"><a class="page-link" th:href="@{/article/pagination(page=${totalPage})}" th:text="#{LAST}">Last</a></li>
@@ -59,11 +65,12 @@
 </div>
 
 <div th:fragment="pagination-category" class="d-flex flex-center" th:if="${totalLimit}!=0">
+    <p th:text="${curPage}" id="currentPage" style="display: none;"></p>
     <nav aria-label="Page navigation example">
         <ul class="pagination pg-blue" th:value="#{curPage}">
             <li class="page-item"><a class="page-link" th:href="@{/category/pagination(page=1)}" th:text="#{FIRST}">First</a></li>
             <li class="page-item"><a class="page-link" th:href="@{/category/pagination(page=${curPage}==1?1:${curPage}-1)}" th:text="#{PREVIOUS}">Previous</a></li>
-            <li class="page-item"><a class="page-link" th:each="i : ${#numbers.sequence( 1, totalPage)}" th:text="#{${i}}" th:href="@{/category/pagination(page=${i})}"></a></li>
+            <li class="page-item" th:each="i : ${#numbers.sequence( 1, totalPage)}"><a class="page-link" th:text="#{${i}}" th:href="@{/category/pagination(page=${i})}"></a></li>
             <li class="page-item"><a class="page-link" th:href="@{/category/pagination(page=${curPage}==${totalPage}?${totalPage}:${curPage}+1)}" th:text="#{NEXT}">Next</a></li>
             <li class="page-item"><a class="page-link" th:href="@{/category/pagination(page=${totalPage})}" th:text="#{LAST}">Last</a></li>
         </ul>

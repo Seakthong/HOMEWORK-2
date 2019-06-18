@@ -11,11 +11,9 @@
     <div class="container-fluid">
         <div th:replace="fragments/structure_nav::header"></div>
         <div th:replace="showData::body"></div>
-<!--        <div th:if="${totalLimit}==-1}"></div>-->
         <div th:if="${totalLimit}> 0}" th:replace="fragments/structure_nav::pagination-article"></div>
         <div th:replace="fragments/structure_nav::footer"></div>
     </div>
-
     <block th:include="fragments/extra-fragment::script"></block>
 </body>
 </html>

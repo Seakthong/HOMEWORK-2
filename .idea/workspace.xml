@@ -2,68 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1008570-8f33-4035-85cd-505ecfc2f55d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mvc/article/configuration/DatabaseConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mvc/article/configuration/DatabaseConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mvc/article/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mvc/article/controller/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mvc/article/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mvc/article/controller/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mvc/article/repository/articleRepository/ArticleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mvc/article/repository/articleRepository/ArticleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mvc/article/repository/articleRepository/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mvc/article/repository/articleRepository/CategoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mvc/article/repository/provider/ArticlesProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mvc/article/repository/provider/ArticlesProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mvc/article/repository/provider/CategoryProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mvc/article/repository/provider/CategoryProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mvc/article/service/ArticleServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mvc/article/service/ArticleServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mvc/article/service/CategoryServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mvc/article/service/CategoryServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mvc/article/service/articleService/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mvc/article/service/articleService/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mvc/article/service/articleService/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mvc/article/service/articleService/CategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/messages_kh.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages_kh.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/modal.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/modal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/JS/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/JS/modal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/CategoryIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/CategoryIndex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/CategoryInputForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/CategoryInputForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/CategoryOutputData.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/CategoryOutputData.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/show_fragment.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/show_fragment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/searchModal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/searchModal.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/structure_nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/structure_nav.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/showData.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/showData.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mvc/article/controller/ArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mvc/article/controller/ArticleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mvc/article/repository/articleRepository/ArticleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mvc/article/repository/articleRepository/ArticleRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mvc/article/repository/articleRepository/CategoryRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mvc/article/repository/articleRepository/CategoryRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mvc/article/repository/provider/ArticlesProvider$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mvc/article/repository/provider/ArticlesProvider$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mvc/article/repository/provider/ArticlesProvider$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mvc/article/repository/provider/ArticlesProvider$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mvc/article/repository/provider/ArticlesProvider$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mvc/article/repository/provider/ArticlesProvider$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mvc/article/repository/provider/ArticlesProvider$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mvc/article/repository/provider/ArticlesProvider$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mvc/article/repository/provider/ArticlesProvider$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mvc/article/repository/provider/ArticlesProvider$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mvc/article/repository/provider/ArticlesProvider$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mvc/article/repository/provider/ArticlesProvider$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mvc/article/repository/provider/ArticlesProvider$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mvc/article/repository/provider/ArticlesProvider$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mvc/article/repository/provider/ArticlesProvider$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mvc/article/repository/provider/ArticlesProvider$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mvc/article/repository/provider/ArticlesProvider$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mvc/article/repository/provider/ArticlesProvider$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mvc/article/repository/provider/ArticlesProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mvc/article/repository/provider/ArticlesProvider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mvc/article/repository/provider/CategoryProvider$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mvc/article/repository/provider/CategoryProvider$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mvc/article/repository/provider/CategoryProvider$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mvc/article/repository/provider/CategoryProvider$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mvc/article/repository/provider/CategoryProvider$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mvc/article/repository/provider/CategoryProvider$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mvc/article/repository/provider/CategoryProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mvc/article/repository/provider/CategoryProvider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mvc/article/service/ArticleServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mvc/article/service/ArticleServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mvc/article/service/CategoryServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mvc/article/service/CategoryServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mvc/article/service/articleService/ArticleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mvc/article/service/articleService/ArticleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mvc/article/service/articleService/CategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mvc/article/service/articleService/CategoryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/messages.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/CSS/modal.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/CSS/modal.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/JS/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/JS/modal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/thumbnail/016541ae-0020-4798-8db4-cc46249f92dc-Test - Copy (4).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/thumbnail/04569448-66aa-4d4c-9c6b-484a04a07e4c-Test - Copy (4).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/thumbnail/0501cc36-155e-4af2-b9b7-2f684d336e6d-Test - Copy (4).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/thumbnail/05c7ea97-c93e-4c3a-ab24-00c558259f48-Test - Copy (7).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/thumbnail/12ca1ba4-14dd-4cfc-992d-092d7f036cda-Test - Copy (4).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/thumbnail/a1ce079d-de4f-4a0f-bc71-e14f79f6ce5f-Test - Copy (2).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/thumbnail/da99b196-88b4-4ab9-b429-e4f1dd5867a9-Test - Copy (4).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/thumbnail/f3a0b410-6592-48c6-a403-83ddf9d71a8f-Test - Copy (7).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/CategoryInputForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/CategoryInputForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/show_fragment.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/show_fragment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/searchModal.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/searchModal.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/structure_nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/structure_nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/showData.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/showData.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
@@ -74,21 +26,90 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragments/searchModal.html">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragments/structure_nav.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+            <state relative-caret-position="198">
+              <caret line="50" column="41" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="41" />
               <folding>
-                <element signature="n#style#0;n#p#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#span#0;n#h4#0;n#nav#0;n#div#2;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mvc/article/repository/articleRepository/ArticleRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="47" column="43" lean-forward="true" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mvc/article/controller/ArticleController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="248">
+              <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mvc/article/service/articleService/ArticleService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mvc/article/service/ArticleServiceImp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="584">
+              <caret line="69" selection-start-line="69" selection-end-line="69" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1710#1711#0" expanded="true" />
+                <element signature="e#1772#1773#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mvc/article/repository/provider/ArticlesProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="90" column="51" lean-forward="true" selection-start-line="90" selection-start-column="51" selection-end-line="90" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -100,8 +121,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -119,15 +140,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/mvc/article/configuration/FileUploadConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/fragments/modal.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/messages_kr_kr.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/mvc/article/BeanConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mvc/article/configuration/MultiLanguagesConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/fragments/extra-fragment.html" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mvc/article/configuration/DatabaseConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mvc/article/configuration/MybatisConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/mvc/article/repository/ArticleRepositoryImp.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mvc/article/repository/provider/articlesProvider.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/CategoryInputFrom.html" />
@@ -138,7 +156,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/mvc/article/service/articleService/CategoryService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mvc/article/service/CategoryServiceImp.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/CSS/modal.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/JS/modal.js" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/fragments/SearchIndex.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/fragments/search-fragment.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/SearchIndex.html" />
@@ -148,13 +165,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/mvc/article/service/ArticleServiceImp.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mvc/article/repository/provider/ArticlesProvider.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mvc/article/controller/SearchController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mvc/article/controller/ArticleController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/fragments/structure_nav.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/mvc/article/controller/CategoryController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/form.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/view.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/showData.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/CategoryOutputData.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/CategoryIndex.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/Search/searchForm.html" />
@@ -162,7 +175,19 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/CategoryInputForm.html" />
         <option value="$PROJECT_DIR$/src/main/resources/messages_kh.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/messages.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mvc/article/controller/MainController.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mvc/article/controller/MainControlller.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/showData.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/fragments/modal.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/JS/modal.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mvc/article/configuration/DatabaseConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/sql/table.sql" />
+        <option value="$PROJECT_DIR$/src/main/resources/sql/insert.sql" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/fragments/searchModal.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mvc/article/controller/ArticleController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/fragments/structure_nav.html" />
       </list>
     </option>
   </component>
@@ -220,6 +245,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="article" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="article" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HOMEWORK-3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="article" type="462c0819:PsiDirectoryNode" />
+              <item name="configuration" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="article" type="b2602c69:ProjectViewProjectNode" />
@@ -301,7 +335,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="sql" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="article" type="b2602c69:ProjectViewProjectNode" />
@@ -310,16 +344,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="CSS" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="article" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HOMEWORK-3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="JS" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="article" type="b2602c69:ProjectViewProjectNode" />
@@ -351,8 +375,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -371,6 +395,9 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\HRD\HOMEWORK-3\src\main\resources\templates" />
       <recent name="D:\HRD\HOMEWORK\src\main\resources\static\flag" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.mvc.article.configuration" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\HRD\HOMEWORK-3\src\main\resources\templates" />
@@ -430,16 +457,19 @@
       <workItem from="1560644834944" duration="3355000" />
       <workItem from="1560741447459" duration="6100000" />
       <workItem from="1560771682500" duration="17400000" />
+      <workItem from="1560868110163" duration="2942000" />
+      <workItem from="1560873470222" duration="7892000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137415000" />
+    <option name="totallyTimeSpent" value="148249000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1719" height="932" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19843656" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16115454" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -450,8 +480,8 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.15566625" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5280199" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36363637" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5267746" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -461,7 +491,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.50560397" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
-      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -515,9 +545,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/thumbnail/default.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/thumbnail/Test - Copy (11).jpg" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/thumbnail/f2a80b4e-b902-46b6-8648-b4641600c5a9-logo-2.jpg" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mvc/article/configuration/FileUploadConfiguration.java">
@@ -560,24 +587,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="28" lean-forward="true" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mvc/article/repository/ArticleRepositoryImp.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mvc/article/configuration/DatabaseConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mvc/article/configuration/MybatisConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -615,13 +625,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="46" column="65" lean-forward="true" selection-start-line="46" selection-start-column="65" selection-end-line="46" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mvc/article/service/CategoryServiceImp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="347">
@@ -651,13 +654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/JS/modal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" selection-end-line="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragments/search-fragment.html" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/SearchIndex.html" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mvc/article/repository/articleRepository/CategoryRepository.java">
@@ -680,13 +676,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/Search/formSearch.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/Search/formSearch.html" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mvc/article/service/articleService/CategoryService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -697,56 +687,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mvc/article/service/articleService/ArticleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mvc/article/service/ArticleServiceImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1710#1711#0" expanded="true" />
-            <element signature="e#1772#1773#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mvc/article/repository/provider/ArticlesProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="72" column="119" lean-forward="true" selection-start-line="72" selection-start-column="119" selection-end-line="72" selection-end-column="119" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mvc/article/controller/SearchController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="834">
           <caret line="79" column="23" lean-forward="true" selection-start-line="79" selection-start-column="23" selection-end-line="79" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mvc/article/repository/articleRepository/ArticleRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-221">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mvc/article/controller/ArticleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="44" selection-start-line="44" selection-end-line="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -767,23 +711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/showData.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -812,49 +739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragments/extra-fragment.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragments/modal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="6" lean-forward="true" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragments/show_fragment.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-390">
-          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragments/structure_nav.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="69" column="97" selection-start-line="69" selection-start-column="97" selection-end-line="69" selection-end-column="97" />
-          <folding>
-            <element signature="n#style#0;n#i#0;n#span#0;n#h4#0;n#nav#0;n#div#2;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/Search/searchForm.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/CategoryIndex.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -876,15 +760,179 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mvc/article/controller/MainController.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mvc/article/controller/MainControlller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="35" column="96" selection-start-line="35" selection-start-column="96" selection-end-line="35" selection-end-column="96" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragments/extra-fragment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/showData.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="721">
+          <caret line="49" column="10" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragments/modal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/JS/modal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="659">
+          <caret line="50" column="30" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mvc/article/configuration/DatabaseConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="43" column="35" lean-forward="true" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/sql/table.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mvc/article/repository/provider/ArticlesProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="90" column="51" lean-forward="true" selection-start-line="90" selection-start-column="51" selection-end-line="90" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mvc/article/service/articleService/ArticleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mvc/article/service/ArticleServiceImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="584">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1710#1711#0" expanded="true" />
+            <element signature="e#1772#1773#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/Search/searchForm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-414">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragments/show_fragment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragments/searchModal.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+        <state relative-caret-position="425">
+          <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
           <folding>
             <element signature="n#style#0;n#p#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/sql/insert.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="2" column="59" lean-forward="true" selection-start-line="2" selection-start-column="59" selection-end-line="2" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mvc/article/controller/ArticleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mvc/article/repository/articleRepository/ArticleRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="47" column="43" lean-forward="true" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fragments/structure_nav.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="50" column="41" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="41" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#span#0;n#h4#0;n#nav#0;n#div#2;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -24,16 +24,13 @@ public class ArticleController {
     @Autowired
     CategoryService categoryService;
     private static int curPage = 1;
-    private static int curLimit = 5;
+    private static int curLimit = 1;
     private static int totalPage = 1;
     private static String curImage;
     private static int AddOrCancel = 0;
 
     @GetMapping(value = {"/view", "/"})
     public String showAll(ModelMap modelMap){
-//        if(AddOrCancel == 1){
-//            articleService.roolIdBack();
-//        }
         int size = 0;
         modelMap.addAttribute("totalLimit", size);
         size = articleService.listSize();
@@ -48,6 +45,7 @@ public class ArticleController {
             modelMap.addAttribute("curPage", curPage);
             modelMap.addAttribute("totalLimit", size);
             modelMap.addAttribute("articles", articleService.ViewPagination(curLimit, curPage));
+            System.out.println(curLimit);
 //            modelMap.addAttribute("categoryService", categoryService);
         }
         return "index";

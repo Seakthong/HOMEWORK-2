@@ -1,0 +1,2 @@
+CREATE TABLE tblcategories (id serial PRIMARY KEY, name VARCHAR(30), status INT);
+CREATE TABLE tblarticles (id serial PRIMARY KEY, title VARCHAR(30), author VARCHAR(30), description TEXT, thumbnail TEXT, status int, category_id int REFERENCES tblcategories(id) ON DELETE CASCADE ON UPDATE CASCADE);

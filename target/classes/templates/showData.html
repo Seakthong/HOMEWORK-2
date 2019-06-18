@@ -23,7 +23,6 @@
                     <th scope="col">
                         <button th:text="#{SET_PAGE}" id="btn-set-page" type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#centralModalSm">Set Page</button>
                     </th>
-
                 </tr>
             </thead>
             <tbody th:if="${totalLimit}!=0">
@@ -47,6 +46,7 @@
 <!--        <footer>-->
 <!--            <div th:replace="fragments/structure_nav::my-footer"></div>-->
 <!--        </footer>-->
+        <div th:replace="fragments/modal::set-page-modal"></div>
     </div>
 
 
