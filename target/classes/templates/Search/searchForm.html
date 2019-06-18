@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www/thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Search Form</title>
+    <block th:include="fragments/extra-fragment::style"></block>
+</head>
+<body>
+<div class="container-fluid">
+    <div th:replace="fragments/structure_nav::header"></div>
+    <div th:replace="fragments/searchModal::search-modal"></div>
+    <div th:replace="showData::body"></div>
+    <div th:if="${totalLimit}> 0}" th:replace="fragments/searchModal::pagination-article"></div>
+    <div th:replace="fragments/structure_nav::footer"></div>
+</div>
+
+
+<block th:include="fragments/extra-fragment::script"></block>
+<script>
+    $(document).ready(function(){
+        console.log($('#cur-title').val())
+        $('#searchTitle').val($("#cur-title").text());
+        $('#select-cate-id').val(null).trigger('change');
+        $('#select-cate-id').val($('#cur-category-id').text());
+
+        $('#select-cate-id').trigger('change');
+    })
+
+    $('#btn-search').on('click',function () {
+        titleVal = $('#searchTitle').val()
+        cateIdVal =$('#select-cate-id').val()
+        if(titleVal == "")
+            $("#btn-search").attr('href',"/search/find/"+"null♥"+"/"+parseInt($('#select-cate-id').val()));
+        else
+            $("#btn-search").attr('href',"/search/find/"+$('#searchTitle').val()+"/"+parseInt($('#select-cate-id').val()));
+    })
+</script>
+</body>
+</html>

@@ -4,6 +4,22 @@
     border-radius: 50%;
 }
 
+.wrapper{
+    border: 1px dashed red;
+    height: 150px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 150px;
+}
+.wrapper .selection{
+    width:150px;
+    border:1px solid #ccc
+}
+
+.circle-image{
+    border-radius: 50%;
+}
+
 .number-input input[type="number"] {
     -webkit-appearance: textfield;
     -moz-appearance: textfield;

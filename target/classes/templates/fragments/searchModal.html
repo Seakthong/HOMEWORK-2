@@ -1,0 +1,41 @@
+
+
+<div th:fragment="search-modal" class="container-fluid">
+    <p id="cur-title" th:text="${curSearchTitle}" style="display: none;"></p>
+    <p id="cur-category-id" th:text="${curCategory}" style="display: none;"></p>
+    <div class="row">
+        <div class="col-5 row" style="margin-top: 10px;">
+                <!-- Default input -->
+                <label for="searchTitle" th:text="#{MODAL-SEARCH-ARTICLE.TITLEE}">Default input</label>
+                <input type="text" id="searchTitle" class="form-control">
+        </div>
+        <div class="col-5 row" style="margin-top: 30px;">
+            <div class="col-12" th:text="#{FORM.CATEGORY}"></div>
+            <div class="col-12 form-group">
+                <select class="browser-default custom-select form-control" id="select-cate-id">
+                    <option selected value="-1">Select Category</option>
+                    <option th:each="category : ${categories}" th:value="${category.id}" th:text="${category.name}">My option</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-2">
+            <button style="margin-top: 35px;"><a href="#" th:text="#{FORM.SEARCH}" id="btn-search"></a></button>
+        </div>
+    </div>
+</div>
+
+<div th:fragment="pagination-article" class="d-flex flex-center" th:if="${totalLimit}!=0">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination pg-blue" th:value="#{curPage}">
+            <li class="page-item"><a class="page-link" th:href="@{/search/pagination(page=1)}" th:text="#{FIRST}">First</a></li>
+            <li class="page-item"><a class="page-link" th:href="@{/search/pagination(page=${curPage}==1?1:${curPage}-1)}" th:text="#{PREVIOUS}">Previous</a></li>
+
+            <li class="page-item"><a class="page-link" th:each="i : ${#numbers.sequence( 1, totalPage)}" th:text="#{${i}}" th:href="@{/search/pagination(page=${i})}"></a></li>
+
+            <li class="page-item"><a class="page-link" th:href="@{/search/pagination(page=${curPage}==${totalPage}?${totalPage}:${curPage}+1)}" th:text="#{NEXT}">Next</a></li>
+            <li class="page-item"><a class="page-link" th:href="@{/search/pagination(page=${totalPage})}" th:text="#{LAST}">Last</a></li>
+        </ul>
+    </nav>
+</div>
+
+

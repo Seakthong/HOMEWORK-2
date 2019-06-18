@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <div th:replace="fragments/structure_nav::header"></div>
         <!-- Default form subscription -->
         <form class="text-center border border-light p-5" th:method="POST"
@@ -34,11 +34,10 @@
                     </div>
                     <div class="row">
                         <div class="col-4" th:text="#{FORM.CATEGORY}"></div>
-                        <div class="col-8">
-                            <select class="browser-default custom-select" th:field="*{category_id}">
-<!--                                <option selected th:value="null">Open this select menu</option>-->
-<!--                                <option th:value="" th:text=""></option>-->
-                                <option th:value="#{category.id}" th:text="#{category.name}" th:each="i : ${#numbers.sequence( 1, ${}}
+                        <div class="col-8 form-group">
+                            <select class="browser-default custom-select form-control" th:field="*{category_id}">
+                                <option selected value="0">Select Category</option>
+                                <option th:each="category : ${categories}" th:value="${category.id}" th:text="${category.name}">My option</option>
                             </select>
                         </div>
                     </div>
@@ -54,7 +53,7 @@
                 <div class="col-6">
                     <label th:text="#{FORM.IMAGE}">IMAGE</label>
                     <div th:if="${status}==1">
-                        <img th:src="|../*{thumbnail}|" style="width: 250px; height: 250px;">
+                        <img th:src="|../../*{thumbnail}|" class="circle-image" style="border-radius: 50%; width: 250px; height: 250px;">
                     </div>
                     <div class="custom-file">
                         <input type="file" class="custom-file-input" id="customFileLang" name="file">
@@ -63,9 +62,11 @@
                     </div>
                 </div>
             </div>
+
 <!--            <input type="submit" value="SAVE">-->
             <button type="submit" th:text="#{FORM.SAVEorUPDATE}"></button>
             <button><a th:href="@{/article/view}" th:text="#{FORM.GO-HOME}"></a></button>
+
         </form>
 
     </div>

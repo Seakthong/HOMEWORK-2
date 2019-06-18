@@ -22,6 +22,9 @@ public interface CategoryRepository {
     @UpdateProvider(method = "update", type = CategoryProvider.class)
     boolean Update(@Param("id") int id, @Param("category") Category category);
 
+    @UpdateProvider(method = "updateDefault", type = CategoryProvider.class)
+    boolean UpdateDefault(@Param("id") int id, @Param("category") Category category);
+
     @UpdateProvider(method = "delete", type = CategoryProvider.class)
     boolean Delete(@Param("id") int id);
 
@@ -47,4 +50,7 @@ public interface CategoryRepository {
             @Result(property = "name", column = "name")
     })
     List<Category> ViewPagination(@Param("limit") int limit, @Param("page") int page);
+
+
+
 }

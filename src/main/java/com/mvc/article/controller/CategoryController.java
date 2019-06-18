@@ -24,6 +24,7 @@ public class CategoryController {
         size = categoryService.listSize();
         if(size > 0) {
             totalPage = (size % curLimit != 0 ? size / curLimit + 1 : size / curLimit);
+            modelMap.addAttribute("totalRecords", size);
             modelMap.addAttribute("totalPage", totalPage);
             modelMap.addAttribute("curLimit", curLimit);
             modelMap.addAttribute("curPage", curPage);

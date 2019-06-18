@@ -9,6 +9,7 @@ public interface CategoryService {
     List<Category> ViewAll();
     boolean Insert(Category category);
     boolean Update(int id, Category category);
+    boolean UpdateDefault(int id, Category category);
     boolean Delete(int id);
     Category ViewOneRecord(int id);
     int listSize();

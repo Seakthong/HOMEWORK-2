@@ -30,6 +30,11 @@ public class CategoryServiceImp implements CategoryService {
     }
 
     @Override
+    public boolean UpdateDefault(int id, Category category) {
+        return categoryRepository.UpdateDefault(id, category);
+    }
+
+    @Override
     public boolean Delete(int id) {
         return categoryRepository.Delete(id);
     }

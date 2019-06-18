@@ -1,5 +1,5 @@
 $('#btn-save-change').on('click',function(){
-    $('#btn-save-change').attr('href',"../returnPage?limited="+$('#in-limit').val());
+    $('#btn-save-change').attr('href',"../article/returnPage?limited="+$('#in-limit').val());
 })
 
 

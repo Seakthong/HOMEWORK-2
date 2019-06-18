@@ -1,6 +1,7 @@
 package com.mvc.article.controller;
 
 import com.mvc.article.repository.model.Article;
+import com.mvc.article.repository.model.Category;
 import com.mvc.article.service.articleService.ArticleService;
 import com.mvc.article.service.articleService.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.sql.SQLException;
 import java.util.UUID;
 
 @Controller
@@ -25,9 +27,13 @@ public class ArticleController {
     private static int curLimit = 5;
     private static int totalPage = 1;
     private static String curImage;
+    private static int AddOrCancel = 0;
 
     @GetMapping(value = {"/view", "/"})
     public String showAll(ModelMap modelMap){
+//        if(AddOrCancel == 1){
+//            articleService.roolIdBack();
+//        }
         int size = 0;
         modelMap.addAttribute("totalLimit", size);
         size = articleService.listSize();
@@ -36,6 +42,7 @@ public class ArticleController {
         if(size > 0) {
             System.out.println(articleService.ViewPagination(curLimit, curPage));
             totalPage = (size % curLimit != 0 ? size / curLimit + 1 : size / curLimit);
+            modelMap.addAttribute("totalRecords", size);
             modelMap.addAttribute("totalPage", totalPage);
             modelMap.addAttribute("curLimit", curLimit);
             modelMap.addAttribute("curPage", curPage);
@@ -48,24 +55,32 @@ public class ArticleController {
 
     @GetMapping(value = "/add")
     public String AddForm(ModelMap modelMap){
-        int id = articleService.lastID();
+        int id = articleService.lastID()+1;
+        System.out.println("ID is : "+id);
         modelMap.addAttribute("article",new Article(id));
-        modelMap.addAttribute("article_id", articleService.lastID());
         modelMap.addAttribute("status",0);
+        System.out.println(categoryService.ViewAll());
         modelMap.addAttribute("categories", categoryService.ViewAll());
-        modelMap.addAttribute("sizeCategory", categoryService.ViewAll().size());
+        AddOrCancel = 1;
         return ("form");
     }
 
     @PostMapping(value = "/add")
     public String Add(@ModelAttribute Article article,@RequestParam("file") MultipartFile file){
+        try{
+            if(article.getCategory_id() == 0){
+                categoryService.Insert(new Category(0, "Default", 1));
+            }
+        }catch(Exception sql){
+            System.out.println(sql.getMessage());
+            categoryService.UpdateDefault(0, new Category(0,"Default",1));
+        }
+
         article = getImageFile(0, file, article);
         article.setStatus(1);
-        article.setId(articleService.lastID());
-//        System.out.println("Last ID : "+article.getId());
-//        System.out.println("POSTING ADD IS : " + article.toString());
+        article.setId(articleService.lastID()+1);
         articleService.Insert(article);
-
+        AddOrCancel = 0;
         return "redirect:/article/view";
     }
 
@@ -77,7 +92,7 @@ public class ArticleController {
             Article article = new Article(i,"why","why","why","/thumbnail/default.png",1,1);
             articleService.Insert(article);
         }
-        return "redirect:/";
+        return "redirect:/article/";
     }
 
     @GetMapping(value = "/delete")
@@ -92,6 +107,7 @@ public class ArticleController {
         modelMap.addAttribute("old_thumbnail",articleService.ViewOneRecord(id).getThumbnail());
         curImage = articleService.ViewOneRecord(id).getThumbnail();
         modelMap.addAttribute("status",1);
+        modelMap.addAttribute("categories", categoryService.ViewAll());
         return "form";
     }
     @PostMapping(value = "/update")
@@ -112,7 +128,7 @@ public class ArticleController {
     @GetMapping(value = "/returnPage")
     public String returnPage(@RequestParam int limited){
         curLimit = limited;
-        return "redirect:/";
+        return "redirect:/article/";
     }
     @GetMapping(value = "/curPage")
     public String curPagination(ModelMap modelMap){
@@ -121,7 +137,7 @@ public class ArticleController {
     }
 
     private static Article getImageFile(int type,MultipartFile file,Article article){
-        String curPic = "/thumbnail/default.png";
+        String curPic = "thumbnail/default.png";
         UUID uuid = UUID.randomUUID();
         String serverPath="src/main/resources/static/thumbnail/";
         if(type == 1){

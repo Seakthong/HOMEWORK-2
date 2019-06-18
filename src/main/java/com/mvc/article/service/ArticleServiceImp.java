@@ -54,4 +54,23 @@ public class ArticleServiceImp implements ArticleService {
     public List<Article> ViewPagination(int limit, int page) {
         return articleRepository.ViewPagination(limit, page);
     }
+
+    @Override
+    public Integer roolIdBack() {
+        if(articleRepository.rollIdBack() == null) {
+            return 1;
+        }
+        return articleRepository.rollIdBack()+1;
+    }
+
+    @Override
+    public List<Article> Search(String title, int cateId) {
+        return articleRepository.Search(title, cateId);
+    }
+
+    @Override
+    public List<Article> searchPage(String title, int cateId, int limit, int page) {
+        return articleRepository.searchPage(title, cateId, limit, page);
+    }
+
 }

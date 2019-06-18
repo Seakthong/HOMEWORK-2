@@ -10,33 +10,35 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" th:href="@{/article/view}" th:text="#{HOME}">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link btn" th:href="@{/article/view}" th:text="#{HOME}">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/article/add}" th:text="#{ADD_ARTICLE}">ADD</a>
+                        <a class="nav-link btn" th:href="@{/article/add}" th:text="#{ADD_ARTICLE}">ADD</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/category/add}" th:text="#{ADD_CATEGORY}">ADD</a>
+                        <a class="nav-link btn" th:href="@{/article/view}" th:text="#{VIEW_ARTICLE}">VIEW</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/article/view}" th:text="#{VIEW_ARTICLE}">VIEW</a>
+                        <a class="nav-link btn" th:href="@{/category/add}" th:text="#{ADD_CATEGORY}">ADD</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/category/view}" th:text="#{VIEW_CATEGORY}"><VIEW></VIEW></a>
+                        <a class="nav-link btn" th:href="@{/category/view}" th:text="#{VIEW_CATEGORY}"><VIEW></VIEW></a>
                     </li>
                 </ul>
                 <ul class="navbar-nav nav-flex-icons">
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{?lang=kh}"><img th:src="@{/flag/messages_kh.jpg}" class="messages-flag" alt="KH"></i></i></a>
+                        <a class="nav-link btn" th:href="@{/search/}" th:text="#{ADD_SEARCH}">SEARCH</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{?lang=en}"><img th:src="@{/flag/messages_en.jpg}" class="messages-flag" alt="UK"></a>
+                        <a class="nav-link btn" th:href="@{?lang=kh}"><img th:src="@{/flag/messages_kh.jpg}" class="messages-flag" alt="KH"></i></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn" th:href="@{?lang=en}"><img th:src="@{/flag/messages_en.jpg}" class="messages-flag" alt="UK"></a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
-    <!--Main Navigation-->
 </div>
 
 <div th:fragment="pagination-article" class="d-flex flex-center" th:if="${totalLimit}!=0">
@@ -44,11 +46,16 @@
         <ul class="pagination pg-blue" th:value="#{curPage}">
             <li class="page-item"><a class="page-link" th:href="@{/article/pagination(page=1)}" th:text="#{FIRST}">First</a></li>
             <li class="page-item"><a class="page-link" th:href="@{/article/pagination(page=${curPage}==1?1:${curPage}-1)}" th:text="#{PREVIOUS}">Previous</a></li>
+
             <li class="page-item"><a class="page-link" th:each="i : ${#numbers.sequence( 1, totalPage)}" th:text="#{${i}}" th:href="@{/article/pagination(page=${i})}"></a></li>
+
             <li class="page-item"><a class="page-link" th:href="@{/article/pagination(page=${curPage}==${totalPage}?${totalPage}:${curPage}+1)}" th:text="#{NEXT}">Next</a></li>
             <li class="page-item"><a class="page-link" th:href="@{/article/pagination(page=${totalPage})}" th:text="#{LAST}">Last</a></li>
         </ul>
+        <h4>Total Limit : <span><i th:text="${totalRecords}" style="color: red;"></i></span></h4>
+
     </nav>
+
 </div>
 
 <div th:fragment="pagination-category" class="d-flex flex-center" th:if="${totalLimit}!=0">
@@ -60,6 +67,7 @@
             <li class="page-item"><a class="page-link" th:href="@{/category/pagination(page=${curPage}==${totalPage}?${totalPage}:${curPage}+1)}" th:text="#{NEXT}">Next</a></li>
             <li class="page-item"><a class="page-link" th:href="@{/category/pagination(page=${totalPage})}" th:text="#{LAST}">Last</a></li>
         </ul>
+        <h4>Total Limit : <span><i th:text="${totalRecords}" style="color: red;"></i></span></h4>
     </nav>
 </div>
 

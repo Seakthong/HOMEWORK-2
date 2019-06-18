@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <div th:replace="fragments/structure_nav::header"></div>
         <!-- Default form subscription -->
         <form class="text-center border border-light p-5" th:method="POST"
@@ -35,7 +35,7 @@
             </div>
 <!--            <input type="submit" value="SAVE">-->
             <button type="submit" th:text="#{FORM.SAVEorUPDATE}"></button>
-            <button><a th:href="@{/category/show}" th:text="#{FORM.GO-HOME}"></a></button>
+            <button><a th:href="@{/category/view}" th:text="#{FORM.GO-HOME}"></a></button>
         </form>
 
     </div>

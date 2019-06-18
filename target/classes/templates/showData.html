@@ -9,10 +9,7 @@
 </head>
 
 <body>
-    <div class="container" th:fragment="body">
-<!--        <header>-->
-<!--            <div th:replace="fragments/structure_nav::header"></div>-->
-<!--        </header>-->
+    <div class="container-fluid" th:fragment="body">
         <table class="table">
             <thead class="black white-text">
                 <tr>
@@ -36,11 +33,11 @@
                     <td th:text="${article.category.name}"></td>
                     <td th:text="${article.author}"></td>
                     <td th:text="${article.description}"></td>
-                    <td><img th:src="@{${article.thumbnail}}" alt="default.png" style="width:75px; height: 75px;"></td>
+                    <td><img th:src="|/@{${article.thumbnail}}|" alt="default.png" class="circle-image" style="width:75px; height: 75px;"></td>
                     <td>
                         <a th:href="@{/article/edit/{id}(id=${article.id})}" th:text="#{EDIT}" class="btn btn-primary">EDIT</a>
                         <a th:href="@{/article/view/{id}(id=${article.id})}" th:text="#{VIEWS}" class="btn btn-success">VIEW</a>
-                        <a th:href="@{/article/articles(id=${article.id})}" th:text="#{DELETE}" class="btn btn-danger">DELETE</a>
+                        <a th:href="@{/article/delete(id=${article.id})}" th:text="#{DELETE}" class="btn btn-danger">DELETE</a>
                     </td>
                 </tr>
             </tbody>

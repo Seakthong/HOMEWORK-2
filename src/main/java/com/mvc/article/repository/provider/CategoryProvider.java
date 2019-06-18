@@ -7,7 +7,7 @@ import org.apache.ibatis.jdbc.SQL;
 
 public class CategoryProvider {
     private String table = "tblcategories";
-    private String innerTable ="";
+    private String innerTable ="tblarticles";
 
     public String Insert(@Param("category") Category category){
         return new SQL(){{
@@ -20,7 +20,7 @@ public class CategoryProvider {
 
     public String selectAll(){
         return new SQL(){{
-            SELECT("*");
+            SELECT("id, name");
             FROM(table);
 //            INNER_JOIN(innerTable);
             WHERE("status = 1");
@@ -46,7 +46,7 @@ public class CategoryProvider {
     }
     public String lastID(){
         return new SQL(){{
-            SELECT("COUNT(*) + 1");
+            SELECT("COUNT(*)");
             FROM(table);
         }}.toString();
     }
@@ -63,7 +63,7 @@ public class CategoryProvider {
 
     public String delete(@Param("id") Integer id){
         return new SQL(){{
-            UPDATE(table);
+            UPDATE(innerTable + " set status = 0 where category_id = #{id}; UPDATE "+table);
             SET("status = 0");
             WHERE("status = 1 AND id = #{id}");
         }}.toString();
@@ -76,4 +76,13 @@ public class CategoryProvider {
             WHERE("id = #{id} AND status = 1");
         }}.toString();
     }
+    public String updateDefault(@Param("id") Integer id, @Param("category") Category category){
+        return new SQL(){{
+            UPDATE(table);
+            SET("name = #{category.name}, status = #{category.status}");
+            WHERE("id = #{id}");
+        }}.toString();
+    }
+
+
 }
