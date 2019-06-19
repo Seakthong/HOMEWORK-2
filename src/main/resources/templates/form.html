@@ -13,6 +13,22 @@
         /*}*/
     </style>
     <block th:include="fragments/extra-fragment::style"></block>
+    <script>
+        $(document).ready(function () {
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    let reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#myImage').attr('src', e.target.result);
+                    };
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+            $("#customFileLang").change(function () {
+                readURL(this);
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -31,6 +47,8 @@
                     <div class="row">
                         <div class="col-4"><label th:text="#{FORM.TITLE}">TITLE</label></div>
                         <div class="col-8"><input type="text" id="#in-title" th:field="*{title}"></div>
+                        <div class="col-12"><p class="alert-danger" th:if="${#fields.hasErrors('title')}" th:errors="*{title}">Error</p></div>
+
                     </div>
                     <div class="row">
                         <div class="col-4" th:text="#{FORM.CATEGORY}"></div>
@@ -44,16 +62,23 @@
                     <div class="row">
                         <div class="col-4"><label th:text="#{FORM.AUTHOR}">AUTHOR</label></div>
                         <div class="col-8"><input type="text" id="#in-author" th:field="*{author}"></div>
+                        <div class="col-12"><p class="alert-danger" th:if="${#fields.hasErrors('author')}" th:errors="*{author}">Error</p></div>
+
                     </div>
                     <div class="row">
                         <div class="col-4"><label th:text="#{FORM.DESCRIPTION}">DESCRIPTION</label></div>
                         <div class="col-8"><input type="text" id="#in-description" th:field="*{description}"></div>
+                        <div class="col-12"><p class="alert-danger" th:if="${#fields.hasErrors('description')}" th:errors="*{description}">Error</p></div>
+
                     </div>
                 </div>
                 <div class="col-6">
                     <label th:text="#{FORM.IMAGE}">IMAGE</label>
                     <div th:if="${status}==1">
-                        <img th:src="|../../*{thumbnail}|" class="circle-image" style="border-radius: 50%; width: 250px; height: 250px;">
+                        <img id="myImage" th:src="|../../*{thumbnail}|" class="circle-image" style="border-radius: 50%; width: 250px; height: 250px;">
+                    </div>
+                    <div th:unless="${status}==1">
+                        <img id="myImage" class="circle-image" style="border-radius: 50%; width: 250px; height: 250px;">
                     </div>
                     <div class="custom-file">
                         <input type="file" class="custom-file-input" id="customFileLang" name="file">

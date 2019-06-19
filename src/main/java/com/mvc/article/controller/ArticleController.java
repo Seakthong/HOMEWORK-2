@@ -7,9 +7,11 @@ import com.mvc.article.service.articleService.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.validation.Valid;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -24,7 +26,7 @@ public class ArticleController {
     @Autowired
     CategoryService categoryService;
     private static int curPage = 1;
-    private static int curLimit = 1;
+    private static int curLimit = 5;
     private static int totalPage = 1;
     private static String curImage;
     private static int AddOrCancel = 0;
@@ -60,11 +62,21 @@ public class ArticleController {
         System.out.println(categoryService.ViewAll());
         modelMap.addAttribute("categories", categoryService.ViewAll());
         AddOrCancel = 1;
-        return ("form");
+        return "form";
     }
 
     @PostMapping(value = "/add")
-    public String Add(@ModelAttribute Article article,@RequestParam("file") MultipartFile file){
+    public String Add(@Valid @ModelAttribute Article article, BindingResult bindingResult, @RequestParam("file") MultipartFile file, ModelMap modelMap){
+        if(bindingResult.hasErrors()){
+            int id = articleService.lastID()+1;
+            System.out.println("ID is : "+id);
+            article.setId(articleService.lastID()+1);
+            modelMap.addAttribute("article",article);
+            modelMap.addAttribute("status",0);
+            modelMap.addAttribute("categories", categoryService.ViewAll());
+            AddOrCancel = 1;
+            return "form";
+        }
         try{
             if(article.getCategory_id() == 0){
                 categoryService.Insert(new Category(0, "Default", 1));

@@ -62,11 +62,9 @@ public class CategoryProvider {
     }
 
     public String delete(@Param("id") Integer id){
-        return new SQL(){{
-            UPDATE(innerTable + " set status = 0 where category_id = #{id}; UPDATE "+table);
-            SET("status = 0");
-            WHERE("status = 1 AND id = #{id}");
-        }}.toString();
+        Integer cate_id = id;
+        System.out.println("UPDATE tblarticles SET status = 0 WHERE category_id = 1; UPDATE tblcategories SET status = 0 WHERE id = 1");
+        return "UPDATE tblarticles SET status = 0 WHERE category_id = "+cate_id+"; UPDATE tblcategories SET status = 0 WHERE id = "+cate_id;
     }
 
     public String update(@Param("id") Integer id, @Param("category") Category category){

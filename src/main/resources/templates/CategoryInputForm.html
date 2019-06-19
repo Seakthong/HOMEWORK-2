@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -21,15 +21,20 @@
         <!-- Default form subscription -->
         <form class="text-center border border-light p-5" th:method="POST"
             th:action="${status}==0?add:@{/category/edit(id=${category.id})}" th:object="${category}" >
-            <div class="container row">
-                <div class="col-6 container-fluid">
+            <div class="container-fluid row">
+                <div class="col-12 container-fluid">
                     <div class="row">
                         <div class="col-4"><label th:text="#{FORM.ID}">ID</label></div>
-                        <div class="col-8"><input type="text" id="#in-id" th:field="*{id}" disabled></div>
+                        <div class="col-4"><input type="text" id="#in-id" th:field="*{id}" disabled style="width: 100%;"></div>
+<!--                        <div class="col-4"><p class="alert alert-danger" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Error</p></div>-->
                     </div>
                     <div class="row">
                         <div class="col-4"><label th:text="#{FORM.NAME}">TITLE</label></div>
-                        <div class="col-8"><input type="text" id="#in-title" th:field="*{name}"></div>
+                        <div class="col-4">
+                            <input type="text" id="#in-title" th:field="*{name}" style="width: 100%;">
+                        </div>
+                        <div class="col-4"><p class="alert alert-danger" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Error</p></div>
+
                     </div>
                 </div>
             </div>

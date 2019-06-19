@@ -2,10 +2,15 @@ package com.mvc.article.repository.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.validation.constraints.NotEmpty;
+
 public class Article {
     int id;
+    @NotEmpty
     String title;
+    @NotEmpty
     String author;
+    @NotEmpty
     String description;
     String thumbnail="default.png";
     int status;

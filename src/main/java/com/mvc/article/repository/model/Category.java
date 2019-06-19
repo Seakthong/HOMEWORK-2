@@ -1,7 +1,10 @@
 package com.mvc.article.repository.model;
 
+import javax.validation.constraints.NotEmpty;
+
 public class Category {
     private int id;
+    @NotEmpty
     private String name;
     private int status;
 

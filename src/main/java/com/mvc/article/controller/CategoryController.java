@@ -5,7 +5,10 @@ import com.mvc.article.service.articleService.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 @Controller
 @RequestMapping("/category")
@@ -44,7 +47,16 @@ public class CategoryController {
     }
 
     @PostMapping(value = "/add")
-    public String Add(@ModelAttribute Category category){
+    public String Add(@Valid @ModelAttribute Category category, BindingResult bindingResult,ModelMap modelMap){
+
+        if(bindingResult.hasErrors()){
+            int id = categoryService.lastID();
+            modelMap.addAttribute("category", category);
+            category.setId(categoryService.lastID());
+            modelMap.addAttribute("status",0);
+            System.out.println("Error");
+            return "CategoryInputForm";
+        }
         category.setStatus(1);
         category.setId(categoryService.lastID());
 
@@ -69,7 +81,9 @@ public class CategoryController {
 
     @GetMapping(value = "/delete")
     public String Delete(@RequestParam int id){
+        System.out.println("Controller Worked");
         categoryService.Delete(id);
+        System.out.println("Controller Worked Return");
         return "redirect:/category/view";
     }
 
@@ -80,7 +94,13 @@ public class CategoryController {
         return "CategoryInputForm";
     }
     @PostMapping(value = "/edit")
-    public String EditUpdate(@RequestParam int id, @ModelAttribute Category category){
+    public String EditUpdate(@Valid @ModelAttribute Category category, BindingResult bindingResult,ModelMap modelMap, @RequestParam int id){
+        if(bindingResult.hasErrors()){
+            modelMap.addAttribute("category", categoryService.ViewOneRecord(id));
+            modelMap.addAttribute("status",1);
+            System.out.println("Error");
+            return "CategoryInputForm";
+        }
         categoryService.Update(id, category);
         return "redirect:/category/view";
     }
